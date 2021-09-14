@@ -43,7 +43,7 @@ function App() {
       "December",
     ];
     let days = [
-      "Sunda",
+      "Sunday",
       "Monday",
       "Tuesday",
       "Wednesday",
@@ -63,12 +63,14 @@ function App() {
   return (
     <div
       className={
-        weather.data.weather[0].main === "Rain"
-          ? "app rain"
-          : weather.data.weather[0].main === "Clear"
-          ? "app clear"
-          : weather.data.weather[0].main === "Clouds"
-          ? "app clouds"
+        weather.data
+          ? weather.data.weather[0].main === "Rain"
+            ? "app rain"
+            : weather.data.weather[0].main === "Clear"
+            ? "app clear"
+            : weather.data.weather[0].main === "Clouds"
+            ? "app clouds"
+            : "app"
           : "app"
       }
     >
